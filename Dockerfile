@@ -10,6 +10,6 @@ RUN apt-get install -y \
 
 ENV PATH="/cool/bin/:${PATH}"
 
-WORKDIR /cool/
+WORKDIR /codes/
 
 CMD tail -f /dev/null
