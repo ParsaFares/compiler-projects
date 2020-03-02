@@ -12,3 +12,6 @@ You can use `coolc filename.cl` to compile your cool program to spim; afterwards
 
 # Copyright Notice
 Originaly this was a work of [@mtp1376](https://github.com/mtp1376), I've just done some minor refactoring and cleanup.
+
+# My work
+You can find my codes under /cool/ dir.
