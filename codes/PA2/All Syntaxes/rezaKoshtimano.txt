@@ -1,0 +1,136 @@
+#name "coolSyntaxTest.cl"
+#1 CLASS
+#1 TYPEID Main
+#1 INHERITS
+#1 TYPEID IO
+#1 '{'
+#2 OBJECTID i
+#2 ':'
+#2 TYPEID Int
+#2 ASSIGN
+#2 INT_CONST 5
+#2 ';'
+#4 OBJECTID main
+#4 '('
+#4 OBJECTID a
+#4 ':'
+#4 TYPEID Int
+#4 ','
+#4 OBJECTID b
+#4 ':'
+#4 TYPEID Bool
+#4 ')'
+#4 ':'
+#4 TYPEID Int
+#4 '{'
+#4 INT_CONST 5
+#4 '}'
+#6 OBJECTID self
+#6 TYPEID SELF_TYPE
+#8 LET
+#8 OBJECTID myID
+#8 ':'
+#8 TYPEID Int
+#8 IN
+#8 INT_CONST 6
+#10 CASE
+#10 OBJECTID abc
+#10 OF
+#11 '<'
+#11 OBJECTID id1
+#11 ERROR ">"
+#11 ':'
+#11 TYPEID Type1
+#11 DARROW
+#11 INT_CONST 1
+#11 ';'
+#12 '<'
+#12 OBJECTID idn
+#12 ERROR ">"
+#12 ':'
+#12 TYPEID Type2
+#12 DARROW
+#12 INT_CONST 2
+#12 ';'
+#13 ESAC
+#15 IF
+#15 OBJECTID expr
+#15 THEN
+#15 OBJECTID expr
+#15 ELSE
+#15 OBJECTID expr
+#15 FI
+#16 WHILE
+#16 OBJECTID expr
+#16 LOOP
+#16 OBJECTID expr
+#16 POOL
+#18 OBJECTID expr
+#18 '@'
+#18 TYPEID TYPE
+#18 '.'
+#18 OBJECTID func
+#18 '('
+#18 INT_CONST 1
+#18 ')'
+#19 OBJECTID expr
+#19 '.'
+#19 OBJECTID func
+#19 '('
+#19 INT_CONST 1
+#19 ','
+#19 INT_CONST 2
+#19 ','
+#19 INT_CONST 3
+#19 ')'
+#21 NEW
+#21 TYPEID TYPE
+#22 ISVOID
+#22 OBJECTID expr
+#23 OBJECTID expr
+#23 '+'
+#23 OBJECTID expr
+#24 OBJECTID expr
+#24 '-'
+#24 OBJECTID expr
+#25 OBJECTID expr
+#25 '*'
+#25 OBJECTID expr
+#26 OBJECTID expr
+#26 '/'
+#26 OBJECTID expr
+#27 '~'
+#27 OBJECTID expr
+#28 OBJECTID expr
+#28 '<'
+#28 OBJECTID expr
+#29 OBJECTID expr
+#29 LE
+#29 OBJECTID expr
+#30 OBJECTID expr
+#30 '='
+#30 OBJECTID expr
+#31 NOT
+#31 OBJECTID expr
+#32 '('
+#32 OBJECTID expr
+#32 ')'
+#34 '{'
+#34 OBJECTID exp1
+#34 ';'
+#34 OBJECTID exp2
+#34 ';'
+#34 OBJECTID exp3
+#34 ';'
+#34 '}'
+#36 BOOL_CONST true
+#36 TYPEID True
+#36 BOOL_CONST true
+#37 BOOL_CONST false
+#37 TYPEID False
+#37 BOOL_CONST false
+#38 TYPEID Bool
+#38 TYPEID BOOL
+#38 OBJECTID bool
+#40 STR_CONST "my String \n new line of string \t added tab"
+#48 '}'
