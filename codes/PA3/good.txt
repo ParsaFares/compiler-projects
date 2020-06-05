@@ -1,0 +1,1473 @@
+#1
+_program
+  #1
+  _class
+    A
+    Object
+    "good.cl"
+    (
+    #2
+    _method
+      ana
+      Int
+      #3
+      _plus
+        #3
+        _let
+          x
+          Int
+          #3
+          _int
+            1
+          : _no_type
+          #3
+          _int
+            2
+          : _no_type
+        : _no_type
+        #3
+        _int
+          3
+        : _no_type
+      : _no_type
+    )
+  #7
+  _class
+    BB__
+    A
+    "good.cl"
+    (
+    )
+  #10
+  _class
+    List
+    Object
+    "good.cl"
+    (
+    #11
+    _method
+      isNil
+      Bool
+      #11
+      _bool
+        1
+      : _no_type
+    #13
+    _method
+      head
+      Int
+      #13
+      _block
+        #13
+        _dispatch
+          #13
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #13
+        _int
+          0
+        : _no_type
+      : _no_type
+    #15
+    _method
+      tail
+      List
+      #15
+      _block
+        #15
+        _dispatch
+          #15
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #15
+        _object
+          self
+        : _no_type
+      : _no_type
+    #17
+    _method
+      cons
+      #17
+      _formal
+        i
+        Int
+      List
+      #18
+      _dispatch
+        #18
+        _new
+          Cons
+        : _no_type
+        init
+        (
+        #18
+        _object
+          i
+        : _no_type
+        #18
+        _object
+          self
+        : _no_type
+        )
+      : _no_type
+    )
+  #24
+  _class
+    Cons
+    List
+    "good.cl"
+    (
+    #26
+    _attr
+      car
+      Int
+      #26
+      _no_expr
+      : _no_type
+    #28
+    _attr
+      cdr
+      List
+      #28
+      _no_expr
+      : _no_type
+    #30
+    _method
+      isNil
+      Bool
+      #30
+      _bool
+        0
+      : _no_type
+    #32
+    _method
+      head
+      Int
+      #32
+      _object
+        car
+      : _no_type
+    #34
+    _method
+      tail
+      List
+      #34
+      _object
+        cdr
+      : _no_type
+    #36
+    _method
+      init
+      #36
+      _formal
+        i
+        Int
+      #36
+      _formal
+        rest
+        List
+      List
+      #37
+      _block
+        #38
+        _assign
+          car
+          #38
+          _object
+            i
+          : _no_type
+        : _no_type
+        #39
+        _assign
+          cdr
+          #39
+          _object
+            rest
+          : _no_type
+        : _no_type
+        #40
+        _object
+          self
+        : _no_type
+      : _no_type
+    )
+  #47
+  _class
+    Main
+    IO
+    "good.cl"
+    (
+    #49
+    _attr
+      mylist
+      List
+      #49
+      _no_expr
+      : _no_type
+    #50
+    _method
+      print_list
+      #50
+      _formal
+        l
+        List
+      Object
+      #51
+      _cond
+        #51
+        _dispatch
+          #51
+          _object
+            l
+          : _no_type
+          isNil
+          (
+          )
+        : _no_type
+        #51
+        _dispatch
+          #51
+          _object
+            self
+          : _no_type
+          out_string
+          (
+          #51
+          _string
+            "\n"
+          : _no_type
+          )
+        : _no_type
+        #52
+        _block
+          #53
+          _dispatch
+            #53
+            _object
+              self
+            : _no_type
+            out_int
+            (
+            #53
+            _dispatch
+              #53
+              _object
+                l
+              : _no_type
+              head
+              (
+              )
+            : _no_type
+            )
+          : _no_type
+          #54
+          _dispatch
+            #54
+            _object
+              self
+            : _no_type
+            out_string
+            (
+            #54
+            _string
+              " "
+            : _no_type
+            )
+          : _no_type
+          #55
+          _dispatch
+            #55
+            _object
+              self
+            : _no_type
+            print_list
+            (
+            #55
+            _dispatch
+              #55
+              _object
+                l
+              : _no_type
+              tail
+              (
+              )
+            : _no_type
+            )
+          : _no_type
+        : _no_type
+      : _no_type
+    #60
+    _method
+      main
+      Object
+      #61
+      _block
+        #62
+        _assign
+          mylist
+          #62
+          _dispatch
+            #62
+            _dispatch
+              #62
+              _dispatch
+                #62
+                _dispatch
+                  #62
+                  _dispatch
+                    #62
+                    _new
+                      List
+                    : _no_type
+                    cons
+                    (
+                    #62
+                    _int
+                      1
+                    : _no_type
+                    )
+                  : _no_type
+                  cons
+                  (
+                  #62
+                  _int
+                    2
+                  : _no_type
+                  )
+                : _no_type
+                cons
+                (
+                #62
+                _int
+                  3
+                : _no_type
+                )
+              : _no_type
+              cons
+              (
+              #62
+              _int
+                4
+              : _no_type
+              )
+            : _no_type
+            cons
+            (
+            #62
+            _int
+              5
+            : _no_type
+            )
+          : _no_type
+        : _no_type
+        #63
+        _loop
+          #63
+          _comp
+            #63
+            _dispatch
+              #63
+              _object
+                mylist
+              : _no_type
+              isNil
+              (
+              )
+            : _no_type
+          : _no_type
+          #64
+          _block
+            #65
+            _dispatch
+              #65
+              _object
+                self
+              : _no_type
+              print_list
+              (
+              #65
+              _object
+                mylist
+              : _no_type
+              )
+            : _no_type
+            #66
+            _assign
+              mylist
+              #66
+              _dispatch
+                #66
+                _object
+                  mylist
+                : _no_type
+                tail
+                (
+                )
+              : _no_type
+            : _no_type
+          : _no_type
+        : _no_type
+      : _no_type
+    )
+  #74
+  _class
+    Main
+    IO
+    "good.cl"
+    (
+    #75
+    _method
+      main
+      SELF_TYPE
+      #76
+      _let
+        c
+        Complex
+        #76
+        _dispatch
+          #76
+          _new
+            Complex
+          : _no_type
+          init
+          (
+          #76
+          _int
+            1
+          : _no_type
+          #76
+          _int
+            1
+          : _no_type
+          )
+        : _no_type
+        #77
+        _cond
+          #77
+          _eq
+            #77
+            _dispatch
+              #77
+              _dispatch
+                #77
+                _object
+                  c
+                : _no_type
+                reflect_X
+                (
+                )
+              : _no_type
+              reflect_Y
+              (
+              )
+            : _no_type
+            #77
+            _dispatch
+              #77
+              _object
+                c
+              : _no_type
+              reflect_0
+              (
+              )
+            : _no_type
+          : _no_type
+          #78
+          _dispatch
+            #78
+            _object
+              self
+            : _no_type
+            out_string
+            (
+            #78
+            _string
+              "=)\n"
+            : _no_type
+            )
+          : _no_type
+          #79
+          _dispatch
+            #79
+            _object
+              self
+            : _no_type
+            out_string
+            (
+            #79
+            _string
+              "=(\n"
+            : _no_type
+            )
+          : _no_type
+        : _no_type
+      : _no_type
+    )
+  #85
+  _class
+    Complex
+    IO
+    "good.cl"
+    (
+    #86
+    _attr
+      x
+      Int
+      #86
+      _no_expr
+      : _no_type
+    #87
+    _attr
+      y
+      Int
+      #87
+      _no_expr
+      : _no_type
+    #89
+    _method
+      init
+      #89
+      _formal
+        a
+        Int
+      #89
+      _formal
+        b
+        Int
+      Complex
+      #90
+      _block
+        #91
+        _eq
+          #91
+          _object
+            x
+          : _no_type
+          #91
+          _object
+            a
+          : _no_type
+        : _no_type
+        #92
+        _eq
+          #92
+          _object
+            y
+          : _no_type
+          #92
+          _object
+            b
+          : _no_type
+        : _no_type
+        #93
+        _object
+          self
+        : _no_type
+      : _no_type
+    #97
+    _method
+      print
+      Object
+      #98
+      _cond
+        #98
+        _eq
+          #98
+          _object
+            y
+          : _no_type
+          #98
+          _int
+            0
+          : _no_type
+        : _no_type
+        #99
+        _dispatch
+          #99
+          _object
+            self
+          : _no_type
+          out_int
+          (
+          #99
+          _object
+            x
+          : _no_type
+          )
+        : _no_type
+        #100
+        _dispatch
+          #100
+          _dispatch
+            #100
+            _dispatch
+              #100
+              _dispatch
+                #100
+                _object
+                  self
+                : _no_type
+                out_int
+                (
+                #100
+                _object
+                  x
+                : _no_type
+                )
+              : _no_type
+              out_string
+              (
+              #100
+              _string
+                "+"
+              : _no_type
+              )
+            : _no_type
+            out_int
+            (
+            #100
+            _object
+              y
+            : _no_type
+            )
+          : _no_type
+          out_string
+          (
+          #100
+          _string
+            "I"
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    #104
+    _method
+      reflect_0
+      Complex
+      #105
+      _block
+        #106
+        _eq
+          #106
+          _object
+            x
+          : _no_type
+          #106
+          _neg
+            #106
+            _object
+              x
+            : _no_type
+          : _no_type
+        : _no_type
+        #107
+        _eq
+          #107
+          _object
+            y
+          : _no_type
+          #107
+          _neg
+            #107
+            _object
+              y
+            : _no_type
+          : _no_type
+        : _no_type
+        #108
+        _object
+          self
+        : _no_type
+      : _no_type
+    #112
+    _method
+      reflect_X
+      Complex
+      #113
+      _block
+        #114
+        _eq
+          #114
+          _object
+            y
+          : _no_type
+          #114
+          _neg
+            #114
+            _object
+              y
+            : _no_type
+          : _no_type
+        : _no_type
+        #115
+        _object
+          self
+        : _no_type
+      : _no_type
+    #119
+    _method
+      reflect_Y
+      Complex
+      #120
+      _block
+        #121
+        _eq
+          #121
+          _object
+            x
+          : _no_type
+          #121
+          _neg
+            #121
+            _object
+              x
+            : _no_type
+          : _no_type
+        : _no_type
+        #122
+        _object
+          self
+        : _no_type
+      : _no_type
+    )
+  #129
+  _class
+    List
+    Object
+    "good.cl"
+    (
+    #130
+    _method
+      isNil
+      Bool
+      #130
+      _bool
+        1
+      : _no_type
+    #132
+    _method
+      head
+      Int
+      #132
+      _block
+        #132
+        _dispatch
+          #132
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #132
+        _int
+          0
+        : _no_type
+      : _no_type
+    #134
+    _method
+      tail
+      List
+      #134
+      _block
+        #134
+        _dispatch
+          #134
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #134
+        _object
+          self
+        : _no_type
+      : _no_type
+    #136
+    _method
+      get_i
+      #136
+      _formal
+        i
+        Int
+      Int
+      #136
+      _block
+        #136
+        _dispatch
+          #136
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #136
+        _int
+          0
+        : _no_type
+      : _no_type
+    #138
+    _method
+      set_i
+      #138
+      _formal
+        i
+        Int
+      #138
+      _formal
+        j
+        Int
+      Object
+      #138
+      _block
+        #138
+        _dispatch
+          #138
+          _object
+            self
+          : _no_type
+          abort
+          (
+          )
+        : _no_type
+        #138
+        _object
+          self
+        : _no_type
+      : _no_type
+    #140
+    _method
+      cons
+      #140
+      _formal
+        i
+        Int
+      List
+      #141
+      _dispatch
+        #141
+        _new
+          Cons
+        : _no_type
+        init
+        (
+        #141
+        _object
+          i
+        : _no_type
+        #141
+        _object
+          self
+        : _no_type
+        )
+      : _no_type
+    )
+  #146
+  _class
+    Cons
+    List
+    "good.cl"
+    (
+    #148
+    _attr
+      car
+      Int
+      #148
+      _no_expr
+      : _no_type
+    #150
+    _attr
+      cdr
+      List
+      #150
+      _no_expr
+      : _no_type
+    #152
+    _attr
+      tmp
+      Int
+      #152
+      _no_expr
+      : _no_type
+    #154
+    _method
+      isNil
+      Bool
+      #154
+      _bool
+        0
+      : _no_type
+    #156
+    _method
+      head
+      Int
+      #156
+      _object
+        car
+      : _no_type
+    #158
+    _method
+      tail
+      List
+      #158
+      _object
+        cdr
+      : _no_type
+    #160
+    _method
+      init
+      #160
+      _formal
+        i
+        Int
+      #160
+      _formal
+        rest
+        List
+      List
+      #161
+      _block
+        #162
+        _assign
+          car
+          #162
+          _object
+            i
+          : _no_type
+        : _no_type
+        #163
+        _assign
+          cdr
+          #163
+          _object
+            rest
+          : _no_type
+        : _no_type
+        #164
+        _object
+          self
+        : _no_type
+      : _no_type
+    #167
+    _method
+      get_i
+      #167
+      _formal
+        i
+        Int
+      Int
+      #168
+      _cond
+        #168
+        _eq
+          #168
+          _object
+            i
+          : _no_type
+          #168
+          _int
+            0
+          : _no_type
+        : _no_type
+        #168
+        _dispatch
+          #168
+          _object
+            self
+          : _no_type
+          head
+          (
+          )
+        : _no_type
+        #169
+        _dispatch
+          #169
+          _dispatch
+            #169
+            _object
+              self
+            : _no_type
+            tail
+            (
+            )
+          : _no_type
+          get_i
+          (
+          #169
+          _sub
+            #169
+            _object
+              i
+            : _no_type
+            #169
+            _int
+              1
+            : _no_type
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    #173
+    _method
+      set_i
+      #173
+      _formal
+        i
+        Int
+      #173
+      _formal
+        j
+        Int
+      Object
+      #174
+      _cond
+        #174
+        _eq
+          #174
+          _object
+            i
+          : _no_type
+          #174
+          _int
+            0
+          : _no_type
+        : _no_type
+        #174
+        _assign
+          car
+          #174
+          _object
+            j
+          : _no_type
+        : _no_type
+        #175
+        _dispatch
+          #175
+          _dispatch
+            #175
+            _object
+              self
+            : _no_type
+            tail
+            (
+            )
+          : _no_type
+          set_i
+          (
+          #175
+          _sub
+            #175
+            _object
+              i
+            : _no_type
+            #175
+            _int
+              1
+            : _no_type
+          : _no_type
+          #175
+          _object
+            j
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )
+  #181
+  _class
+    Main
+    IO
+    "good.cl"
+    (
+    #183
+    _attr
+      mylist
+      List
+      #183
+      _no_expr
+      : _no_type
+    #185
+    _attr
+      tmp
+      Int
+      #185
+      _no_expr
+      : _no_type
+    #186
+    _attr
+      len
+      Int
+      #186
+      _no_expr
+      : _no_type
+    #187
+    _attr
+      m
+      Int
+      #187
+      _int
+        0
+      : _no_type
+    #188
+    _attr
+      n
+      Int
+      #188
+      _int
+        0
+      : _no_type
+    #189
+    _attr
+      ans
+      Int
+      #189
+      _int
+        0
+      : _no_type
+    #191
+    _attr
+      my_flag
+      Bool
+      #191
+      _bool
+        1
+      : _no_type
+    #193
+    _method
+      main
+      Object
+      #194
+      _block
+        #195
+        _dispatch
+          #195
+          _object
+            self
+          : _no_type
+          out_string
+          (
+          #195
+          _string
+            "How many numbers to sort?"
+          : _no_type
+          )
+        : _no_type
+        #196
+        _assign
+          len
+          #196
+          _dispatch
+            #196
+            _object
+              self
+            : _no_type
+            in_int
+            (
+            )
+          : _no_type
+        : _no_type
+        #197
+        _let
+          j
+          Int
+          #197
+          _int
+            0
+          : _no_type
+          #198
+          _loop
+            #198
+            _lt
+              #198
+              _object
+                j
+              : _no_type
+              #198
+              _object
+                len
+              : _no_type
+            : _no_type
+            #199
+            _block
+              #200
+              _assign
+                mylist
+                #200
+                _dispatch
+                  #200
+                  _new
+                    Cons
+                  : _no_type
+                  init
+                  (
+                  #200
+                  _dispatch
+                    #200
+                    _object
+                      self
+                    : _no_type
+                    in_int
+                    (
+                    )
+                  : _no_type
+                  #200
+                  _object
+                    mylist
+                  : _no_type
+                  )
+                : _no_type
+              : _no_type
+              #201
+              _assign
+                j
+                #201
+                _plus
+                  #201
+                  _object
+                    j
+                  : _no_type
+                  #201
+                  _int
+                    1
+                  : _no_type
+                : _no_type
+              : _no_type
+            : _no_type
+          : _no_type
+        : _no_type
+        #204
+        _loop
+          #204
+          _lt
+            #204
+            _object
+              m
+            : _no_type
+            #204
+            _object
+              len
+            : _no_type
+          : _no_type
+          #205
+          _block
+            #206
+            _loop
+              #206
+              _lt
+                #206
+                _object
+                  n
+                : _no_type
+                #206
+                _object
+                  len
+                : _no_type
+              : _no_type
+              #207
+              _block
+                #208
+                _cond
+                  #208
+                  _eq
+                    #208
+                    _object
+                      m
+                    : _no_type
+                    #208
+                    _object
+                      n
+                    : _no_type
+                  : _no_type
+                  #208
+                  _int
+                    0
+                  : _no_type
+                  #209
+                  _cond
+                    #209
+                    _eq
+                      #209
+                      _dispatch
+                        #209
+                        _object
+                          mylist
+                        : _no_type
+                        get_i
+                        (
+                        #209
+                        _object
+                          m
+                        : _no_type
+                        )
+                      : _no_type
+                      #209
+                      _dispatch
+                        #209
+                        _object
+                          mylist
+                        : _no_type
+                        get_i
+                        (
+                        #209
+                        _object
+                          n
+                        : _no_type
+                        )
+                      : _no_type
+                    : _no_type
+                    #209
+                    _assign
+                      my_flag
+                      #209
+                      _bool
+                        0
+                      : _no_type
+                    : _no_type
+                    #210
+                    _int
+                      0
+                    : _no_type
+                  : _no_type
+                : _no_type
+                #213
+                _assign
+                  n
+                  #213
+                  _plus
+                    #213
+                    _object
+                      n
+                    : _no_type
+                    #213
+                    _int
+                      1
+                    : _no_type
+                  : _no_type
+                : _no_type
+              : _no_type
+            : _no_type
+            #215
+            _cond
+              #215
+              _eq
+                #215
+                _object
+                  my_flag
+                : _no_type
+                #215
+                _bool
+                  1
+                : _no_type
+              : _no_type
+              #215
+              _assign
+                ans
+                #215
+                _plus
+                  #215
+                  _object
+                    ans
+                  : _no_type
+                  #215
+                  _int
+                    1
+                  : _no_type
+                : _no_type
+              : _no_type
+              #216
+              _int
+                0
+              : _no_type
+            : _no_type
+            #218
+            _assign
+              n
+              #218
+              _int
+                0
+              : _no_type
+            : _no_type
+            #219
+            _assign
+              m
+              #219
+              _plus
+                #219
+                _object
+                  m
+                : _no_type
+                #219
+                _int
+                  1
+                : _no_type
+              : _no_type
+            : _no_type
+            #220
+            _assign
+              my_flag
+              #220
+              _bool
+                1
+              : _no_type
+            : _no_type
+          : _no_type
+        : _no_type
+        #222
+        _dispatch
+          #222
+          _object
+            self
+          : _no_type
+          out_string
+          (
+          #222
+          _string
+            "Answer = "
+          : _no_type
+          )
+        : _no_type
+        #223
+        _dispatch
+          #223
+          _object
+            self
+          : _no_type
+          out_int
+          (
+          #223
+          _object
+            ans
+          : _no_type
+          )
+        : _no_type
+        #224
+        _dispatch
+          #224
+          _object
+            self
+          : _no_type
+          out_string
+          (
+          #224
+          _string
+            "\n"
+          : _no_type
+          )
+        : _no_type
+      : _no_type
+    )

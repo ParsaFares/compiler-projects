@@ -103,7 +103,7 @@ class Board inherits IO {
    )
  };
 
-};
+}
 
 
 
@@ -399,7 +399,7 @@ class CellularAutomaton inherits Board {
  };
 
 
-};
+}
 
 class Main inherits CellularAutomaton {
     cells : CellularAutomaton;
@@ -432,5 +432,5 @@ class Main inherits CellularAutomaton {
 	    self;
       }  ) ); }
     };
-};
+}
 
